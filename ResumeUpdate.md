@@ -15,7 +15,7 @@ These should be the main focus of your resume:
 
 ## 2. Keep but Summarize (Secondary/Supporting Skills)
 
-Mention briefly to show breadth without overloading:
+Mention briefly to show breadth without overloading -
 
 - **Docker & Kubernetes basics:** “Experience containerizing applications and deploying to Kubernetes clusters.”  
 - **Monitoring tools (Prometheus & Grafana):** “Working knowledge for application and infrastructure monitoring.”  
