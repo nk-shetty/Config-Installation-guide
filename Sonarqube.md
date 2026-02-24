@@ -8,17 +8,17 @@ This guide shows how to install and configure SonarQube on Linux using bash comm
 ```bash
 sudo apt update
 sudo apt install -y openjdk-17-jdk unzip wget
-
+```
 Check Java is installed:
 ```bash
 java -version
-
+```
 ---
 
 ## Step 2: Create a dedicated SonarQube user
 ```bash
 sudo useradd -r -s /bin/false sonar
-
+```
 ---
 
 ## Step 3: Download SonarQube
@@ -29,7 +29,7 @@ SONAR_URL="https://binaries.sonarsource.com/Distribution/sonarqube/$SONAR_ZIP"
 
 cd /tmp
 wget $SONAR_URL
-
+```
 ---
 
 ## Step 4: Extract and move to /opt
@@ -37,7 +37,7 @@ wget $SONAR_URL
 sudo unzip $SONAR_ZIP -d /opt/
 sudo mv /opt/sonarqube-$SONAR_VERSION /opt/sonarqube
 sudo chown -R sonar:sonar /opt/sonarqube
-
+```
 ---
 
 ## Step 5: Configure systemd service
@@ -61,7 +61,7 @@ TimeoutSec=600
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
 ---
 
 ## Step 6: Reload systemd and enable/start SonarQube
@@ -69,11 +69,11 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable sonar
 sudo systemctl start sonar
-
+```
 Check the service status:
 ```bash
 sudo systemctl status sonar --no-pager
-
+```
 ---
 
 ## Step 7: Access SonarQube
